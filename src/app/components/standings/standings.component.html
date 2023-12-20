@@ -1,0 +1,31 @@
+
+<div class="card">
+    <p-table [value]="standings" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Rank</th>
+                <th>Logo</th>
+                <th>Name</th>
+                <th>Games</th>
+                <th>W</th>
+                <th>L</th>
+                <th>D</th>
+                <th>Goal Difference</th>
+                <th>Points</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-standing>
+            <tr [pSelectableRow]="standing"  (click)="goToTeamStatistics(standing.teamId)">
+                <td>{{standing.rank}}</td>
+                <td><img src={{standing.logo}} alt="team logo" style="width: 50px;"></td>
+                <td>{{ standing.name }}</td>
+                <td>{{ standing.gamesPlayed }}</td>
+                <td>{{ standing.gamesWin }}</td>
+                <td>{{ standing.gamesLose }}</td>
+                <td>{{ standing.gamesDraw }}</td>
+                <td>{{ standing.goalDiff }}</td>
+                <td>{{ standing.points }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
