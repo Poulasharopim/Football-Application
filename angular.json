@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/football-app/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
